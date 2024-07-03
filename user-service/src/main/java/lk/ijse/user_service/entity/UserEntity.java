@@ -1,11 +1,11 @@
 package lk.ijse.user_service.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -15,6 +15,8 @@ import lombok.NoArgsConstructor;
 public class UserEntity implements SuperEntity{
     @Id
     private String userId;
+    //    @NotBlank(message = "Email cannot be blank")
+//    @Pattern(regexp = "^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$", message = "Email should be valid")
     private String userMail;
     private String userName;
     private String password;
